@@ -1,11 +1,11 @@
 import logging
 import openai
 from aiogram import Bot, Dispatcher, types
-from aiohttp import web
+from aiogram.utils import executor
 
 # Tokenlar
-TOKEN = "7429016817:AAGCXxVj3J4y98mExl5CRQ9l_dOYRBY3TbI"
-OPENAI_API_KEY = "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"
+TOKEN = "YOUR_TELEGRAM_TOKEN"
+OPENAI_API_KEY = "YOUR_OPENAI_KEY"
 
 # Sozlamalar
 logging.basicConfig(level=logging.INFO)
@@ -30,13 +30,5 @@ async def chatgpt(message: types.Message):
     except Exception as e:
         await message.reply("Xatolik yuz berdi: " + str(e))
 
-# Web server (Render uchun)
-async def on_startup(app):
-    from aiogram import executor
-    executor.start_polling(dp)
-
-app = web.Application()
-app.on_startup.append(on_startup)
-
 if __name__ == '__main__':
-    web.run_app(app, host='0.0.0.0', port=10000)
+    executor.start_polling(dp, skip_updates=True)qn62
