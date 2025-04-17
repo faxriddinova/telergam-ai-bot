@@ -4,7 +4,7 @@ from aiogram import Bot, Dispatcher, types
 from aiohttp import web
 
 # Tokenlar
-TOKEN = "7429016817:AAF0dXmeSXozvNmeRJQtac8gmJcW0nMz7a4"
+TOKEN = "7429016817:AAGCXxVj3J4y98mExl5CRQ9l_dOYRBY3TbI"
 OPENAI_API_KEY = "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"
 
 # Sozlamalar
