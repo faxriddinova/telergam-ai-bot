@@ -4,8 +4,8 @@ from aiogram import Bot, Dispatcher, types
 from aiogram.utils import executor
 
 # Tokenlar
-TOKEN = "YOUR_TELEGRAM_TOKEN"
-OPENAI_API_KEY = "YOUR_OPENAI_KEY"
+TOKEN = "7429016817:AAGCXxVj3J4y98mExl5CRQ9l_dOYRBY3TbI"
+OPENAI_API_KEY = "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"
 
 # Sozlamalar
 logging.basicConfig(level=logging.INFO)
@@ -16,7 +16,7 @@ openai.api_key = OPENAI_API_KEY
 # /start komandasi
 @dp.message_handler(commands=['start'])
 async def send_welcome(message: types.Message):
-    await message.reply("Salom! Men sun'iy intellekt botman. Savol bering.")
+    await message.reply("Salom! Men ChatGPT botman. Savolingiz bo'lsa bering.")
 
 # Oddiy savolga GPT orqali javob
 @dp.message_handler()
