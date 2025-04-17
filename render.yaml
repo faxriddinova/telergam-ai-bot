@@ -2,5 +2,11 @@ services:
   - type: web
     name: telegram-ai-bot
     env: python
-    buildCommand: pip install -r requirements.txt
+    plan: free
+    buildCommand: ""
     startCommand: python main.py
+    envVars:
+      - key: BOT_TOKEN
+        value: 7429016817:AAFehue5ne9fVTfHiQt7f96aeltUCdtQ-vg
+      - key: OPENAI_API_KEY
+        value: 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
