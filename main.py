@@ -31,4 +31,4 @@ async def chatgpt(message: types.Message):
         await message.reply("Xatolik yuz berdi: " + str(e))
 
 if __name__ == '__main__':
-    executor.start_polling(dp, skip_updates=True)qn62
+    executor.start_polling(dp, skip_updates=True)
